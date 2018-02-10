@@ -3,6 +3,7 @@
     const http = new easyHTTP;
 
     //Get posts
+    /*
     http.get('https://jsonplaceholder.typicode.com/posts', function(error ,response){
         if (error) {
             console.log(error);
@@ -12,7 +13,9 @@
 
 
     });
+    */
 
+    /*
     //get single post
     http.get('https://jsonplaceholder.typicode.com/posts/1', function (error, response) {
         if (error) {
@@ -23,6 +26,7 @@
 
 
     });
+    */
 
     //create data
     const data = {
@@ -31,6 +35,7 @@
     };
 
     //create post
+    /*
     http.post('https://jsonplaceholder.typicode.com/posts', data, function(error, post){
         if (error) {
             console.log(error);
@@ -38,3 +43,17 @@
             console.log(post);
         }
     });
+    */
+
+    //update
+    http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(error, post){
+        if (error) {
+            console.log(error);
+        } else {
+            console.log(post);
+        }
+    });
+
+
+
+    
