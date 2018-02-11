@@ -30,6 +30,23 @@ class EasyHTTP{
     }
 
     //make an http put request
+    put(url,data){
+        return new Promise((resolve, reject)=>{
+            fetch(url, {
+                method : 'PUT',
+                headers : {
+                    'Content-type' : 'application/json'
+                },
+                body : JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(data => resolve(data))
+            .catch(error => reject(error))
+        });
+        
+    }
+
+    //make an http delete request
     delete(url){
         return new Promise((resolve, reject)=>{
             fetch(url, {
